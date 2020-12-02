@@ -11,7 +11,7 @@ Do NOT use arrow functions to write the methods - hurts performance
     2. getDerivedStateFromProps(props, state)
     3. render()
     4. componentDidMount() gets called after it mounts a component (after the initial render) - good for long-running and async processes
-ffwfw
+
 ### Updating
     5. shouldComponentUpdate(nextProps, nextState)
 
