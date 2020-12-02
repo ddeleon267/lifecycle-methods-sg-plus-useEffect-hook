@@ -1,3 +1,6 @@
+(quick note) - I have the original lifecycle method code in the main branch, and the refactor with hooks is on the "hooks" branch!
+
+
 # React Lifecycle Methods  
 
 ## Stages or phases of a component
