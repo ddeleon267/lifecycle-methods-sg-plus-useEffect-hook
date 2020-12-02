@@ -1,4 +1,8 @@
 # Getting Started with Create React App
+This is a simple demo app of React lifecycle methods for my cohort.
+
+(quick note) - I have the original lifecycle method code in the main branch, and the refactor with hooks is on the "hooks" branch!
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

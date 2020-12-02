@@ -1,40 +1,26 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 
-class Name extends Component {
-    constructor(){
-        super()
-        console.log("constructor for Name")
-        this.state = {
-            language: "React"
-        }
+function Name() {
+    const [language, setLanguage] = useState("") // setting initial state
+
+    const changeLanguage = () => {
+        let theName = (language === "Ruby" ? "Javascript" : "Ruby")
+        setLanguage(theName) // updating state
     }
 
-    changeLanguage = () => {
-        this.setState({
-            language: "Ruby"
-        })
-    }
+    useEffect(() => { // first arg is your function - whatever logic you want
+        console.log("my method call")
+        setLanguage("React")
+    }, [language]) // item(s) in branch are the value(s) you're tracking - if the value changes, the effect runs
+    // if you leave the [] empty, the effect runs only once
 
-    componentDidMount() {
-        this.interval = setInterval(() => {
-            console.log("Making an api call")
-        }, 2000)
-    }
-
-    componentWillUnmount(){
-        clearInterval(this.interval)
-    }
-
-    render() {
-        console.log("Name render was run")
-        return (
-            <div>
-                {this.state.language}
-                <br />
-                <button onClick={this.changeLanguage}>Change Language</button>
-            </div>
-        )
-    }
+    return (
+        <div>
+            {language}
+            <br />
+            <button onClick={changeLanguage}>Change Language</button>
+        </div>
+    )
 }
 
 export default Name
